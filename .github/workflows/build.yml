@@ -1,0 +1,93 @@
+# Builds the Folder Stickers installers and publishes them on this repository's Releases page.
+#
+# The source code lives in a PRIVATE repository. This workflow reads it with a read-only
+# deploy key (secret SOURCE_DEPLOY_KEY), builds on GitHub's servers, and uploads only the
+# finished installers here. The code itself is never published.
+#
+# Started by `npm run release` in the private repository, or by hand:
+#   Actions > Build and publish > Run workflow > enter the version tag, e.g. v1.1.0
+
+name: Build and publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Version tag to build, for example v1.1.0'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Get the source (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: Himanshudaga13/folder-stickers-source
+          ref: ${{ inputs.tag }}
+          ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node scripts/ensure-electron.js
+      - name: Build installers
+        run: npx electron-builder --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installers-${{ runner.os }}
+          path: |
+            dist/*.dmg
+            dist/*.exe
+          if-no-files-found: error
+          retention-days: 3
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - name: Write release notes
+        env:
+          TAG: ${{ inputs.tag }}
+          REPO: ${{ github.repository }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const v = process.env.TAG.replace(/^v/, "");
+            let notes = "";
+            try {
+              const log = fs.readFileSync("CHANGELOG.md", "utf8");
+              const m = log.match(new RegExp("## " + v.replace(/\./g, "\\.") + "[^\\n]*\\n([\\s\\S]*?)(\\n## |$)"));
+              if (m) notes = m[1].trim() + "\n\n";
+            } catch (e) {}
+            notes += "### Which file do I need?\n| Your computer | Download |\n|---|---|\n" +
+              "| Mac with Apple chip (M1 to M4) | `Folder-Stickers-" + v + "-arm64.dmg` |\n" +
+              "| Mac with Intel chip | `Folder-Stickers-" + v + "-x64.dmg` |\n" +
+              "| Windows 10 / 11 | `Folder-Stickers-Setup-" + v + ".exe` |\n\n" +
+              "Install steps are in the [README](https://github.com/" + process.env.REPO + "#download-and-install). " +
+              "Free to use under the [Folder Stickers Freeware Licence](https://github.com/" + process.env.REPO + "/blob/main/LICENSE.txt).";
+            fs.writeFileSync("notes.md", notes);
+          '
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$TAG" out/*.dmg out/*.exe \
+            --title "Folder Stickers ${TAG#v}" --notes-file notes.md --latest
