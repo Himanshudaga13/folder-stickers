@@ -1,0 +1,50 @@
+FOLDER STICKERS FREEWARE LICENCE
+Copyright (c) 2026 Himanshu Daga. All rights reserved.
+
+By installing or using Folder Stickers ("the Software") you agree to these terms.
+
+1. FREE USE
+   You may download, install and use the Software free of charge, on any number
+   of your own computers, for personal or business use.
+
+2. WHAT YOU MAY NOT DO
+   You may not, and may not allow anyone else to:
+   a) copy the Software except to install and use it as allowed above;
+   b) modify, translate, adapt, or create derivative works based on the Software;
+   c) reverse engineer, decompile, disassemble, or unpack the Software, or try to
+      obtain its source code, except where the law expressly allows this despite
+      this restriction;
+   d) redistribute, publish, share, rent, lend, sell, or sublicense the Software,
+      or host it for download anywhere other than the official download page;
+   e) use the Software, its code, design, or name to build, market, or sell a
+      similar or competing product;
+   f) remove or change any copyright notice, name, or logo in the Software.
+
+3. OWNERSHIP
+   The Software is licensed, not sold. Himanshu Daga keeps all copyright and other
+   rights in the Software, its source code, design, and the name "Folder Stickers".
+
+4. YOUR DATA
+   Your notes are saved on your own computer, inside your folders. The Software
+   does not send your notes anywhere.
+
+5. NO WARRANTY
+   The Software is provided "as is", without warranty of any kind. You use it at
+   your own risk.
+
+6. NO LIABILITY
+   To the extent the law allows, Himanshu Daga is not liable for any loss or damage
+   arising from the use of, or inability to use, the Software, including any loss
+   of data.
+
+7. ENDING THIS LICENCE
+   This licence ends automatically if you break any of these terms. You must then
+   stop using the Software and delete all copies.
+
+8. GOVERNING LAW
+   These terms are governed by the laws of India, and the courts of India have
+   jurisdiction over any dispute about them.
+
+Official download page: see the Releases section of the official Folder Stickers
+GitHub repository.
+Contact: info@dagaadvisorygroup.com
