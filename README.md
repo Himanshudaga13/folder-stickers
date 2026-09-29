@@ -74,7 +74,7 @@ xattr -cr "/Applications/Folder Stickers.app"
 
 | | Mac (Finder) | Windows (File Explorer) |
 |---|---|---|
-| **Keyboard** | Press **⌘⇧S** in any Finder window | Press **Ctrl+Shift+S** in any Explorer window |
+| **Keyboard** | Press **⌘⇧S** in any Finder window | Press **Ctrl+Alt+N** in any Explorer window |
 | **Mouse** | Click the **Add Sticker** button in the Finder toolbar | Right-click empty space > **Add sticker here** |
 | **Menu** | Menu bar icon > Add sticker | Tray icon > Add sticker |
 
@@ -98,7 +98,7 @@ of any Finder window.
 
 | Action | Mac | Windows |
 |---|---|---|
-| Add a sticker to the current folder | ⌘⇧S | Ctrl+Shift+S |
+| Add a sticker to the current folder | ⌘⇧S | Ctrl+Alt+N |
 | Show / hide all stickers | ⌘⌥S | Ctrl+Alt+S |
 | New sticker next to this one | ⌘N | Ctrl+N |
 | Bold / Italic / Underline | ⌘B / ⌘I / ⌘U | Ctrl+B / Ctrl+I / Ctrl+U |
