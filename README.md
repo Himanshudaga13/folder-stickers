@@ -49,7 +49,7 @@ Go to **[Releases](https://github.com/Himanshudaga13/folder-stickers/releases/la
 
 | Your computer | Download |
 |---|---|
-| Mac with Apple chip (M1, M2, M3, M4) | `Folder-Stickers-x.y.z-arm64.dmg` |
+| Mac with Apple chip (M1 or later) | `Folder-Stickers-x.y.z-arm64.dmg` |
 | Mac with Intel chip | `Folder-Stickers-x.y.z-x64.dmg` |
 | Windows 10 or 11 | `Folder-Stickers-Setup-x.y.z.exe` |
 
