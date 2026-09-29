@@ -1,5 +1,9 @@
 # What's new
 
+## 1.2.2 (29 September 2026)
+
+- Windows: the file that stores a folder's notes (.stickers.json) now stays out of sight even when "Hidden items" is turned on in File Explorer. Files in your existing folders are hidden the next time you edit a note there.
+
 ## 1.2.1 (29 September 2026)
 
 - A note that holds only a picture now asks before it is deleted
