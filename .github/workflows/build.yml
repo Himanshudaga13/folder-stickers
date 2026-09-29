@@ -49,6 +49,8 @@ jobs:
           path: |
             dist/*.dmg
             dist/*.exe
+            dist/*.blockmap
+            dist/latest*.yml
           if-no-files-found: error
           retention-days: 3
 
@@ -89,5 +91,6 @@ jobs:
           TAG: ${{ inputs.tag }}
         run: |
           gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
-          gh release create "$TAG" out/*.dmg out/*.exe \
+          # latest.yml + .blockmap let the installed Windows app update itself.
+          gh release create "$TAG" out/*.dmg out/*.exe out/*.blockmap out/latest*.yml \
             --title "Folder Stickers ${TAG#v}" --notes-file notes.md --latest

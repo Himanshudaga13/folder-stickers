@@ -1,5 +1,15 @@
 # What's new
 
+## 1.2.0 (29 September 2026)
+
+- **Reminders:** set a date and time on any note and get a notification, even when the folder is closed
+- **Notes on files:** attach a note to one file; it shows when that file is selected
+- **Links and pictures:** web addresses become clickable links, and you can paste screenshots into notes
+- **Collapse to a tab:** shrink a note to a slim bar
+- **Colour meanings:** each colour has a label you choose (for example red = Urgent); new red colour
+- **Updates:** Windows now updates itself; the Mac version tells you when a new version is out
+- Fixed: adding a note from the right-click menu could use the wrong folder when the app was already running
+
 ## 1.1.2 (29 September 2026)
 
 - Windows: notes no longer slip behind the folder window

@@ -29,13 +29,19 @@ what is still pending, who sent what.
 ## Features
 
 - **Notes that stay with the folder.** Each note remembers its folder and its position.
+- **Notes on files.** Attach a note to one file. It shows whenever that file is selected.
+- **Reminders.** Set a date and time on any note. You get a notification even if the folder is closed,
+  and clicking it opens the folder.
 - **Formatting:** bold, italic, underline, strikethrough and tick-box checklists.
-- **Six colours** and a transparency slider.
+- **Links and pictures.** Web addresses become links (Ctrl+click or Cmd+click to open).
+  Paste a screenshot straight into a note.
+- **Colours with meaning.** Seven colours, each with a label you choose, for example red = Urgent,
+  green = Done.
+- **Collapse to a tab.** Shrink a note to a slim bar so it doesn't cover your files.
 - **Follows the window.** Move or resize the folder window and the notes move with it.
-  Minimise or close it and they hide.
 - **Your shortcuts, your way.** Change every keyboard shortcut and the right-click menu text.
+- **Updates itself** on Windows. On a Mac you're told when a new version is out.
 - **Private.** Notes are saved on your own computer, inside the folder. Nothing is uploaded.
-- **Light.** Runs quietly in the menu bar (Mac) or system tray (Windows).
 
 ## Download and install
 
@@ -78,6 +84,9 @@ xattr -cr "/Applications/Folder Stickers.app"
 | **Mouse** | Click the **Add Sticker** button in the Finder toolbar | Right-click empty space > **Add sticker here** |
 | **Menu** | Menu bar icon > Add sticker | Tray icon > Add sticker |
 
+**Note on a file:** select the file, then press **⌃⌥N** (Mac) or **Ctrl+Alt+F** (Windows).
+On Windows you can also right-click the file > **Add note to this file**.
+
 **Add the Finder toolbar button (Mac, one time):** click the Folder Stickers icon in the menu bar >
 **Show Finder toolbar button…**, then hold **⌘ Command** and drag **Add Sticker** onto the top bar
 of any Finder window.
@@ -91,20 +100,29 @@ of any Finder window.
   below, or right-click inside the note.
 - **Checklist:** click ☑ in the top bar. Click a ☐ to tick it. Press Enter for the next item,
   Enter on an empty item to stop.
+- **Reminder:** click the 🔔 bell. Pick *In 1 hour*, *Tomorrow 9 am*, *Monday 9 am* or any date and time.
+  When it's due the note turns red. Click the bell > **Mark done**.
+- **Collapse:** click ⌃ in the top bar, or double-click the bar. Click again to open it.
+- **Links:** type or paste a web address. Hold **Ctrl** (Windows) or **Cmd** (Mac) and click to open it.
+- **Pictures:** copy a screenshot and paste it into the note, or drag an image file onto it.
 - **Colour and transparency:** click ◐ in the top bar.
 - **Delete:** click ✕. If the note has text, you're asked to confirm.
+- **All your reminders:** tray / menu bar icon > **Reminders**.
 
 ## Keyboard shortcuts
 
 | Action | Mac | Windows |
 |---|---|---|
 | Add a sticker to the current folder | ⌘⇧S | Ctrl+Alt+N |
+| Add a note to the selected file | ⌃⌥N | Ctrl+Alt+F |
 | Show / hide all stickers | ⌘⌥S | Ctrl+Alt+S |
 | New sticker next to this one | ⌘N | Ctrl+N |
 | Bold / Italic / Underline | ⌘B / ⌘I / ⌘U | Ctrl+B / Ctrl+I / Ctrl+U |
 | Strikethrough | ⌘⇧X | Ctrl+Shift+X |
 | Checklist item on / off | ⌘⇧C | Ctrl+Shift+C |
 | Next colour | ⌘⇧K | Ctrl+Shift+K |
+| Set a reminder | ⌘⇧R | Ctrl+Shift+R |
+| Collapse / expand | ⌘⇧M | Ctrl+Shift+M |
 | Delete this sticker | ⌘⇧⌫ | Ctrl+Shift+Backspace |
 
 ## Make your own shortcuts
@@ -120,7 +138,9 @@ Click the Folder Stickers icon in the menu bar / tray > **Shortcuts & settings�
 - **↺** puts back the default. **✕** removes the shortcut.
 - Turn the right-click entry on or off, and change what it says.
 - Choose whether the add-sticker shortcuts work only in folder windows (default) or everywhere.
+- Give each colour a meaning, and choose whether it shows on the notes.
 - Pick the colour for new stickers, and whether the app starts when you log in.
+- Check for updates.
 
 ## Where are my notes saved?
 
