@@ -1,5 +1,12 @@
 # What's new
 
+## 1.1.2 (29 September 2026)
+
+- Windows: notes no longer slip behind the folder window
+- Windows: the add-sticker shortcut is now **Ctrl+Alt+N** (Ctrl+Shift+S is often taken by the Snipping Tool)
+- If a shortcut is already used by another app, you now get a clear message and can pick another in Settings
+- Bold, italic, underline and strikethrough now switch off properly instead of carrying onto the next line
+
 ## 1.1.1 (29 September 2026)
 
 - Mac: fixed notes not showing after a folder window goes from full screen back to normal size
