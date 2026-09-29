@@ -1,5 +1,12 @@
 # What's new
 
+## 1.2.1 (29 September 2026)
+
+- A note that holds only a picture now asks before it is deleted
+- A collapsed note now turns red and says "Due" when its reminder goes off
+- Pasting text with a web address no longer jumps the cursor to the end of the note
+- Turning off update checks in Settings now also stops the check that was about to run
+
 ## 1.2.0 (29 September 2026)
 
 - **Reminders:** set a date and time on any note and get a notification, even when the folder is closed

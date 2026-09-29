@@ -78,7 +78,7 @@ jobs:
               if (m) notes = m[1].trim() + "\n\n";
             } catch (e) {}
             notes += "### Which file do I need?\n| Your computer | Download |\n|---|---|\n" +
-              "| Mac with Apple chip (M1 to M4) | `Folder-Stickers-" + v + "-arm64.dmg` |\n" +
+              "| Mac with Apple chip (M1 or later) | `Folder-Stickers-" + v + "-arm64.dmg` |\n" +
               "| Mac with Intel chip | `Folder-Stickers-" + v + "-x64.dmg` |\n" +
               "| Windows 10 / 11 | `Folder-Stickers-Setup-" + v + ".exe` |\n\n" +
               "Install steps are in the [README](https://github.com/" + process.env.REPO + "#download-and-install). " +
