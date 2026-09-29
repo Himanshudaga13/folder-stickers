@@ -1,5 +1,10 @@
 # What's new
 
+## 1.1.1 (29 September 2026)
+
+- Mac: fixed notes not showing after a folder window goes from full screen back to normal size
+- Updated contact details in the licence shown during installation
+
 ## 1.1.0 (28 September 2026)
 
 First public release.
