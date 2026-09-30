@@ -15,6 +15,9 @@ on:
       tag:
         description: 'Version tag to build, for example v1.1.0'
         required: true
+      ref:
+        description: 'Source branch or commit to build (optional; defaults to the tag)'
+        required: false
 
 permissions:
   contents: write
@@ -31,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Himanshudaga13/folder-stickers-source
-          ref: ${{ inputs.tag }}
+          ref: ${{ inputs.ref || inputs.tag }}
           ssh-key: ${{ secrets.SOURCE_DEPLOY_KEY }}
           persist-credentials: false
       - uses: actions/setup-node@v4
