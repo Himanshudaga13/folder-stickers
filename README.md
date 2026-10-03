@@ -31,7 +31,14 @@ what is still pending, who sent what.
 - **Notes that stay with the folder.** Each note remembers its folder and its position.
 - **Notes on files.** Attach a note to one file. It shows whenever that file is selected.
 - **Reminders.** Set a date and time on any note. You get a notification even if the folder is closed,
-  and clicking it opens the folder.
+  and clicking it opens the folder. Reminders can repeat every day, weekday, week, month or year.
+- **Search all notes.** Find any note in any folder by typing a word, then jump straight to it.
+- **Desktop notes.** Notes that sit on your screen, outside any folder, like paper notes on a monitor.
+- **Bin.** Deleted notes stay in the bin for 30 days. Undo a delete with one click.
+- **Templates.** Ready-made starting points such as a checklist or client follow-up. Make your own.
+- **Export.** Save any note as a text file or a PDF.
+- **Backup.** Save all notes to one file, and restore them on a new computer.
+- **Text size and dark notes.** Larger text, and darker colours that follow your computer's dark mode.
 - **Formatting:** bold, italic, underline, strikethrough and tick-box checklists.
 - **Links and pictures.** Web addresses become links (Ctrl+click or Cmd+click to open).
   Paste a screenshot straight into a note.
@@ -106,8 +113,31 @@ of any Finder window.
 - **Links:** type or paste a web address. Hold **Ctrl** (Windows) or **Cmd** (Mac) and click to open it.
 - **Pictures:** copy a screenshot and paste it into the note, or drag an image file onto it.
 - **Colour and transparency:** click ◐ in the top bar.
-- **Delete:** click ✕. If the note has text, you're asked to confirm.
+- **Repeat a reminder:** in the reminder panel, pick *Every day*, *Every weekday*, *Every week*, *Every month* or *Every year*.
+- **Delete:** click ✕. If the note has text, you're asked to confirm. Click the notification that follows
+  to undo, or find the note later in the **Bin**.
+- **Template:** right-click inside a note > **Insert template**.
+- **Export:** right-click inside a note > **Export…**, then choose a text file or PDF.
 - **All your reminders:** tray / menu bar icon > **Reminders**.
+
+## Search, desktop notes and the bin
+
+Click the Folder Stickers icon (menu bar on Mac, near the clock on Windows) > **Search all notes…**,
+or press **⌃⌥F** (Mac) / **Ctrl+Alt+L** (Windows) while a folder is in front.
+
+| Tab | What it shows |
+|---|---|
+| All notes | Every note, grouped by folder. Click one to open its folder with the note showing. |
+| Reminders | Notes with a reminder, the soonest first. |
+| Desktop | Your desktop notes. |
+| Bin | Deleted notes from the last 30 days. Click **Restore** to put one back. |
+
+**Desktop notes:** icon > **New note on the desktop** (or **⌃⌥D** / **Ctrl+Alt+D**). They stay on screen
+whatever is open. Right-click one > **Keep on top of other windows** to float it above everything.
+
+**Backup:** icon > **Shortcuts & settings…** > **Backup** > **Back up…** saves every note to one file.
+On a new computer, install Folder Stickers and click **Restore…**. Notes go back into the same folders.
+If a folder isn't on the new computer, its notes are put on the desktop with the folder name at the top.
 
 ## Keyboard shortcuts
 
@@ -116,6 +146,8 @@ of any Finder window.
 | Add a sticker to the current folder | ⌘⇧S | Ctrl+Alt+N |
 | Add a note to the selected file | ⌃⌥N | Ctrl+Alt+F |
 | Show / hide all stickers | ⌘⌥S | Ctrl+Alt+S |
+| Search all notes | ⌃⌥F | Ctrl+Alt+L |
+| New note on the desktop | ⌃⌥D | Ctrl+Alt+D |
 | New sticker next to this one | ⌘N | Ctrl+N |
 | Bold / Italic / Underline | ⌘B / ⌘I / ⌘U | Ctrl+B / Ctrl+I / Ctrl+U |
 | Strikethrough | ⌘⇧X | Ctrl+Shift+X |
@@ -140,6 +172,7 @@ Click the Folder Stickers icon in the menu bar / tray > **Shortcuts & settings�
 - Choose whether the add-sticker shortcuts work only in folder windows (default) or everywhere.
 - Give each colour a meaning, and choose whether it shows on the notes.
 - Pick the colour for new stickers, and whether the app starts when you log in.
+- Choose the text size and dark notes, edit your templates, and back up or restore all notes.
 - Check for updates.
 
 ## Where are my notes saved?
@@ -154,8 +187,9 @@ data folder instead.
 **Does it slow my computer down?** No. It checks the folder windows a few times a second, which
 uses very little power.
 
-**Can I put stickers on the Desktop, Recents or This PC?** No. Those aren't real folders.
-Stickers work in any normal folder, including drives and synced folders.
+**Can I put stickers on the Desktop, Recents or This PC?** Not inside those windows, because they
+aren't real folders. Use a **desktop note** instead. Stickers work in any normal folder, including
+drives and synced folders.
 
 **The "Add Sticker" item doesn't show in the Mac right-click menu.** Newer versions of macOS
 hide it. Use the toolbar button or ⌘⇧S instead.
