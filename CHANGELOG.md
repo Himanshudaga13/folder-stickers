@@ -1,5 +1,17 @@
 # What's new
 
+## 1.3.0 (3 October 2026)
+
+- **Search all notes:** find any note in any folder by typing a word, then jump straight to it
+- **All notes window:** every note grouped by folder, plus tabs for reminders, desktop notes and the bin
+- **Bin:** deleted notes stay for 30 days and can be restored. Click the notification after deleting to undo
+- **Repeating reminders:** every day, weekday, week, month or year
+- **Desktop notes:** notes that stay on screen, outside any folder. Can float on top of other windows
+- **Templates:** insert a ready-made checklist, client follow-up or meeting note, or make your own in Settings
+- **Export:** save a note as a text file or a PDF
+- **Backup and restore:** save all notes to one file and bring them back on another computer
+- **Text size and dark notes:** larger text options, and darker colours that follow your computer's dark mode
+
 ## 1.2.3 (1 October 2026)
 
 - Windows: fixed the app not working after the computer restarts
