@@ -1,0 +1,25 @@
+# One-off: point every version tag at the matching commit on main (after a history clean-up).
+name: Move tags to main
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  retag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Move tags
+        run: |
+          git fetch --tags --force
+          for t in $(git tag); do
+            old=$(git rev-list -n1 "$t")
+            subj=$(git log -1 --format=%s "$old")
+            new=$(git log origin/main --format='%H%x09%s' | awk -F'\t' -v s="$subj" '$2==s{print $1; exit}')
+            if [ -n "$new" ] && [ "$new" != "$old" ]; then
+              echo "$t: $old -> $new"
+              git tag -f "$t" "$new"
+              git push -f origin "refs/tags/$t"
+            fi
+          done
